@@ -12,7 +12,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
     def handle(self, handler_input):
 
         print("Called Skill Handler for LaunchRequest Intent.")
-        speech_text  = "Bienvenido a Eco SKill, puedes decir imita Español"
+        speech_text  = "Bienvenido a Eco SKill, puedes decir últimas noticias"
 
         handler_input.response_builder.speak(speech_text).set_card(
             SimpleCard("Eco", speech_text)).set_should_end_session(False)
@@ -26,7 +26,7 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "Puedes decir imita Español"
+        speech_text = "Puedes decir últimas noticias, 2 novedades"
 
         handler_input.response_builder.speak(speech_text).ask(speech_text).set_card(
             SimpleCard("Eco", speech_text))
